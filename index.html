@@ -2,20 +2,39 @@
 <html lang="id">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio — Sweet Baking</title>
+    <meta
+      name="description"
+      content="Portfolio Nita — Baking Projects dan resep favorit. Dibangun mobile-first dengan Bootstrap 5."
+    />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: rgb(34, 152, 195);
+      }
+      .hero-art {
+        min-height: 260px;
+      }
+    </style>
   </head>
-  <body style="background-color: rgb(255, 224, 227)" <body>
+  <body>
     <!-- Navbar -->
     <nav
-      class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top"
+      class="navbar navbar-expand-md navbar-light bg-body-tertiary border-bottom sticky-top"
     >
       <div class="container">
         <a class="navbar-brand fw-semibold" href="#home">Nita • Baking</a>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -27,8 +46,14 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div id="nav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
@@ -51,8 +76,8 @@
             <div class="col-md-6">
               <h1 class="display-5 fw-bold">
                 Halo, saya Nita — Baking Projects
-                <p>Update pertama saya di GitHub</p>
               </h1>
+              <p class="mt-2 mb-1 text-muted">Update pertama saya di GitHub</p>
               <p class="lead text-secondary">
                 Proyek dan resep favorit. Dibangun mobile-first.
               </p>
@@ -61,9 +86,10 @@
               >
               <a href="#contact" class="btn btn-outline-secondary">Kontak</a>
             </div>
+
             <div class="col-md-6">
               <div
-                class="ratio ratio-16x9 bg-body-secondary rounded-4 d-flex align-items-center justify-content-center"
+                class="ratio ratio-16x9 bg-body-secondary rounded-4 d-flex align-items-center justify-content-center hero-art"
               >
                 <span class="text-secondary">Gambar/Ilustrasi</span>
               </div>
@@ -76,8 +102,8 @@
       <section id="about" class="py-5">
         <div class="container">
           <h2 class="h3 fw-semibold">About</h2>
-          <p class="text-secondary">
-            Tuliskan ringkasan skill & tools kamu di sini.
+          <p class="text-secondary mb-3">
+            Tuliskan ringkasan skill &amp; tools kamu di sini.
           </p>
           <div class="d-flex flex-wrap gap-2">
             <span class="badge text-bg-light">HTML</span>
@@ -95,35 +121,44 @@
       >
         <div class="container">
           <h2 class="h3 fw-semibold mb-4">Projects</h2>
+
           <div class="row g-4">
             <div class="col-sm-6 col-lg-4">
               <article class="card h-100">
-                <div class="ratio ratio-16x9 bg-body-secondary"></div>
+                <div
+                  class="ratio ratio-16x9 bg-body-secondary rounded-top"
+                ></div>
                 <div class="card-body">
-                  <h3 class="card-title h5">Resep A</h3>
-                  <p class="card-text small text-secondary">
+                  <h3 class="card-title h5 mb-2">Resep A</h3>
+                  <p class="card-text small text-secondary mb-0">
                     Deskripsi singkat.
                   </p>
                 </div>
               </article>
             </div>
+
             <div class="col-sm-6 col-lg-4">
               <article class="card h-100">
-                <div class="ratio ratio-16x9 bg-body-secondary"></div>
+                <div
+                  class="ratio ratio-16x9 bg-body-secondary rounded-top"
+                ></div>
                 <div class="card-body">
-                  <h3 class="card-title h5">Resep B</h3>
-                  <p class="card-text small text-secondary">
+                  <h3 class="card-title h5 mb-2">Resep B</h3>
+                  <p class="card-text small text-secondary mb-0">
                     Deskripsi singkat.
                   </p>
                 </div>
               </article>
             </div>
+
             <div class="col-sm-6 col-lg-4">
               <article class="card h-100">
-                <div class="ratio ratio-16x9 bg-body-secondary"></div>
+                <div
+                  class="ratio ratio-16x9 bg-body-secondary rounded-top"
+                ></div>
                 <div class="card-body">
-                  <h3 class="card-title h5">Resep C</h3>
-                  <p class="card-text small text-secondary">
+                  <h3 class="card-title h5 mb-2">Resep C</h3>
+                  <p class="card-text small text-secondary mb-0">
                     Deskripsi singkat.
                   </p>
                 </div>
@@ -137,22 +172,51 @@
       <section id="contact" class="py-5">
         <div class="container">
           <h2 class="h3 fw-semibold">Contact</h2>
+
           <form class="row gy-3" onsubmit="event.preventDefault()">
             <div class="col-12 col-md-6">
-              <input class="form-control" placeholder="Nama" />
+              <label class="form-label visually-hidden" for="nama">Nama</label>
+              <input
+                id="nama"
+                name="nama"
+                class="form-control"
+                placeholder="Nama"
+                autocomplete="name"
+                required
+              />
             </div>
+
             <div class="col-12 col-md-6">
-              <input type="email" class="form-control" placeholder="Email" />
+              <label class="form-label visually-hidden" for="email"
+                >Email</label
+              >
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                autocomplete="email"
+                required
+              />
             </div>
+
             <div class="col-12">
+              <label class="form-label visually-hidden" for="pesan"
+                >Pesan</label
+              >
               <textarea
+                id="pesan"
+                name="pesan"
                 class="form-control"
                 rows="4"
                 placeholder="Pesan"
+                required
               ></textarea>
             </div>
+
             <div class="col-12">
-              <button class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary">Kirim</button>
             </div>
           </form>
         </div>
@@ -161,7 +225,7 @@
 
     <footer class="py-4 border-top">
       <div
-        class="container small text-secondary d-flex justify-content-between"
+        class="container small text-secondary d-flex justify-content-between align-items-center"
       >
         <span>© <span id="y"></span> Nita</span>
         <a href="#home" class="link-secondary text-decoration-none"
@@ -170,9 +234,37 @@
       </div>
     </footer>
 
+    <!-- Bootstrap Bundle (JS + Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
+      // Tahun footer
       document.getElementById("y").textContent = new Date().getFullYear();
+
+      // Aktifkan item navbar sesuai hash saat user scroll/klik (opsional kecil)
+      const links = document.querySelectorAll(".navbar .nav-link");
+      const sections = [...links].map((a) =>
+        document.querySelector(a.getAttribute("href"))
+      );
+
+      const activate = (hash) => {
+        links.forEach((l) =>
+          l.classList.toggle("active", l.getAttribute("href") === hash)
+        );
+      };
+
+      const onScroll = () => {
+        let current = "#home";
+        sections.forEach((sec) => {
+          if (sec && window.scrollY + 120 >= sec.offsetTop)
+            current = "#" + sec.id;
+        });
+        activate(current);
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      // Set awal
+      activate(location.hash || "#home");
     </script>
   </body>
 </html>
